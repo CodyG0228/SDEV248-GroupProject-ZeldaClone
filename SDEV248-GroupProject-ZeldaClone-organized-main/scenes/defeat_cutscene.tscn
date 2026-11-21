@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://0of1fd07spcb"]
+
+[ext_resource type="Script" path="res://scenes/defeat_cutscene.gd" id="1_m26tf"]
+[ext_resource type="Texture2D" uid="uid://bh6byc7vum40k" path="res://Kaelistra, The Aberrant Saint.png" id="2_drwk3"]
+
+[node name="DefeatCutscene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_m26tf")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(568, 874)
+scale = Vector2(1.15, 1.15)
+texture = ExtResource("2_drwk3")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 14.0
+offset_right = 290.0
+offset_bottom = 513.0
+theme_override_font_sizes/font_size = 22
+text = "Oh no! You failed to secure the supply line for the castle! Now the neighboring kingdom will be able to seize the castle for themselves! From there, Mad Queen Kaelistra will continue to ravage our lands due to the castle's superior tactical position. O Great Wizard, please tell me you have a spell to reverse this outcome!"
+autowrap_mode = 2
+
+[node name="RetryButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -77.0
+offset_right = 137.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 50
+text = "Go Back in Time"
+
+[node name="QuitButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -113.0
+offset_top = -77.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 50
+text = "Quit"
+
+[connection signal="pressed" from="RetryButton" to="." method="_on_retry_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
