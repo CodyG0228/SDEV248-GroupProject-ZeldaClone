@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=3 uid="uid://heo5gv5axufy"]
+
+[ext_resource type="Texture2D" uid="uid://bbudd66d3yimn" path="res://sprites/EmptyHeartSprite.png" id="1_g624v"]
+[ext_resource type="Texture2D" uid="uid://b3x0tbv5y6t5a" path="res://sprites/FullHeartSprite.png" id="2_cex0p"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_61bll"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_g624v")
+}],
+"loop": true,
+"name": &"empty",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_cex0p")
+}],
+"loop": true,
+"name": &"full",
+"speed": 5.0
+}]
+
+[node name="HUD" type="CanvasLayer"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(165, 35)
+sprite_frames = SubResource("SpriteFrames_61bll")
+animation = &"full"
+autoplay = "full"
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+position = Vector2(100, 35)
+sprite_frames = SubResource("SpriteFrames_61bll")
+animation = &"full"
+autoplay = "full"
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="."]
+position = Vector2(35, 35)
+sprite_frames = SubResource("SpriteFrames_61bll")
+animation = &"full"
+autoplay = "full"

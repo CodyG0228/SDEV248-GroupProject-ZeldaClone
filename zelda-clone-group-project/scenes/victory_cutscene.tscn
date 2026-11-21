@@ -1,0 +1,80 @@
+[gd_scene load_steps=3 format=3 uid="uid://cecgkgnjmalo4"]
+
+[ext_resource type="Script" path="res://scenes/victory_cutscene.gd" id="1_jjql3"]
+[ext_resource type="Texture2D" uid="uid://6ddsoujwtpcv" path="res://Spearwoman.png" id="2_at71w"]
+
+[node name="VictoryCutscene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jjql3")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -6.0
+offset_top = -4.0
+offset_right = 1172.0
+offset_bottom = 660.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(867, 348)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_at71w")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 4.0
+offset_right = 615.0
+offset_bottom = 273.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 22
+text = "Thank you O Great Wizard, you have secured the supply line for the castle. Now that our resources are save, we can focus on preparing ourselves for the coming threat. I highly doubt that the neighboring kingdom will back down just because we foiled their inital plan. 
+Still... we should enjoy the peace while it lasts. 
+Our scouts will continue to check for more of those inhuman soldiers, or anything worse.
+If Mad Queen Kaelistra was willing to send these things to disrupt a supply line, there's no telling what she might send to attempt to take control of the castle in the future.
+Enough about that though, it's time to celebrate."
+autowrap_mode = 2
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 455.0
+offset_right = 551.0
+offset_bottom = 542.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Hooray for the Almighty Wizard!
+Glory and prosperity to the Kingdom!"
+autowrap_mode = 2
+
+[node name="PlayAgainButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -77.0
+offset_right = 280.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 50
+text = "Play Again?"
+
+[node name="QuitButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -113.0
+offset_top = -77.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 50
+text = "Quit"
+
+[connection signal="pressed" from="PlayAgainButton" to="." method="_on_play_again_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]

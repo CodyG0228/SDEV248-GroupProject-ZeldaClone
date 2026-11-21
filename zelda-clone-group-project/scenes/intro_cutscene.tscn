@@ -1,0 +1,335 @@
+[gd_scene load_steps=34 format=3 uid="uid://u7f8hqxah26"]
+
+[ext_resource type="Script" path="res://scenes/intro_cutscene.gd" id="1_awupj"]
+[ext_resource type="Texture2D" uid="uid://bayxdoeppttt1" path="res://FlowingFieldAnimatedBackground.png" id="1_yed6w"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r233e"]
+atlas = ExtResource("1_yed6w")
+region = Rect2(0, 0, 480, 230)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dg5dn"]
+atlas = ExtResource("1_yed6w")
+region = Rect2(480, 0, 480, 230)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x6tg4"]
+atlas = ExtResource("1_yed6w")
+region = Rect2(960, 0, 480, 230)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bxbov"]
+atlas = ExtResource("1_yed6w")
+region = Rect2(1440, 0, 480, 230)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_epvdx"]
+atlas = ExtResource("1_yed6w")
+region = Rect2(0, 230, 480, 230)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jmwun"]
+atlas = ExtResource("1_yed6w")
+region = Rect2(480, 230, 480, 230)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rhmk1"]
+atlas = ExtResource("1_yed6w")
+region = Rect2(960, 230, 480, 230)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_63r8g"]
+atlas = ExtResource("1_yed6w")
+region = Rect2(1440, 230, 480, 230)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hjonw"]
+atlas = ExtResource("1_yed6w")
+region = Rect2(0, 460, 480, 230)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wkb0a"]
+atlas = ExtResource("1_yed6w")
+region = Rect2(480, 460, 480, 230)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_se6ag"]
+atlas = ExtResource("1_yed6w")
+region = Rect2(960, 460, 480, 230)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h0g5d"]
+atlas = ExtResource("1_yed6w")
+region = Rect2(1440, 460, 480, 230)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q70bf"]
+atlas = ExtResource("1_yed6w")
+region = Rect2(0, 690, 480, 230)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ke5jc"]
+atlas = ExtResource("1_yed6w")
+region = Rect2(480, 690, 480, 230)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_enqw6"]
+atlas = ExtResource("1_yed6w")
+region = Rect2(960, 690, 480, 230)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fglfa"]
+atlas = ExtResource("1_yed6w")
+region = Rect2(1440, 690, 480, 230)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_57xna"]
+atlas = ExtResource("1_yed6w")
+region = Rect2(0, 920, 480, 230)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bolee"]
+atlas = ExtResource("1_yed6w")
+region = Rect2(480, 920, 480, 230)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qewgs"]
+atlas = ExtResource("1_yed6w")
+region = Rect2(960, 920, 480, 230)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v8oan"]
+atlas = ExtResource("1_yed6w")
+region = Rect2(1440, 920, 480, 230)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dkxqy"]
+atlas = ExtResource("1_yed6w")
+region = Rect2(0, 1150, 480, 230)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iqmuq"]
+atlas = ExtResource("1_yed6w")
+region = Rect2(480, 1150, 480, 230)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ujp5m"]
+atlas = ExtResource("1_yed6w")
+region = Rect2(960, 1150, 480, 230)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ctm0o"]
+atlas = ExtResource("1_yed6w")
+region = Rect2(1440, 1150, 480, 230)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j17sx"]
+atlas = ExtResource("1_yed6w")
+region = Rect2(0, 1380, 480, 230)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2c04c"]
+atlas = ExtResource("1_yed6w")
+region = Rect2(480, 1380, 480, 230)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eix2e"]
+atlas = ExtResource("1_yed6w")
+region = Rect2(960, 1380, 480, 230)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ybe21"]
+atlas = ExtResource("1_yed6w")
+region = Rect2(1440, 1380, 480, 230)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yi880"]
+atlas = ExtResource("1_yed6w")
+region = Rect2(0, 1610, 480, 230)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5wy6v"]
+atlas = ExtResource("1_yed6w")
+region = Rect2(480, 1610, 480, 230)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gqxto"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r233e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dg5dn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x6tg4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bxbov")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_epvdx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jmwun")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rhmk1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_63r8g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hjonw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wkb0a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_se6ag")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h0g5d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q70bf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ke5jc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_enqw6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fglfa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_57xna")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bolee")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qewgs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v8oan")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dkxqy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iqmuq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ujp5m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ctm0o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j17sx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2c04c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eix2e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ybe21")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yi880")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5wy6v")
+}],
+"loop": true,
+"name": &"default",
+"speed": 15.0
+}]
+
+[node name="IntroCutscene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_awupj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(567, 370)
+scale = Vector2(3.16042, 4.43043)
+sprite_frames = SubResource("SpriteFrames_gqxto")
+autoplay = "default"
+frame_progress = 0.488697
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 36.0
+offset_right = 1154.0
+offset_bottom = 60.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 17
+text = "A guard at the castle watchtower has witnessed suspicious activity out in the woods, what seems to be inhuman soldiers of unknown origin."
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 94.0
+offset_right = 1123.0
+offset_bottom = 122.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "These soldiers seem to be camping out nearby, setting up in the perfect place for an ambush along the main road."
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 296.0
+offset_top = 149.0
+offset_right = 819.0
+offset_bottom = 191.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "This spells trouble... serious trouble!"
+
+[node name="Label4" type="Label" parent="."]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 230.0
+offset_right = 1142.0
+offset_bottom = 265.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "If these soldiers are playing the role of bandits, then our castle may be cut-off from the capital!"
+
+[node name="Label5" type="Label" parent="."]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 300.0
+offset_right = 1146.0
+offset_bottom = 326.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 18
+text = "That means we may not receive the resources we need from traveling merchants, which may leave us vulnerable once winter hits!"
+
+[node name="Label6" type="Label" parent="."]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 358.0
+offset_right = 1122.0
+offset_bottom = 392.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "If we don't do something soon, the castle may fall into enemy hands the next time it is sieged!"
+
+[node name="Label7" type="Label" parent="."]
+layout_mode = 0
+offset_left = 102.0
+offset_top = 418.0
+offset_right = 1050.0
+offset_bottom = 460.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Scout out the main road and take care of those inhuman soldiers!"
+
+[node name="Label8" type="Label" parent="."]
+layout_mode = 0
+offset_left = 171.0
+offset_top = 471.0
+offset_right = 982.0
+offset_bottom = 513.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Our livelyhood depends on your efforts O Great Wizard!"
+
+[node name="StartButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -105.5
+offset_top = -31.0
+offset_right = 105.5
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 60
+text = "Press to Begin the Mission"
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
