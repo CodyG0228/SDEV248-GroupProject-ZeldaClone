@@ -2,10 +2,14 @@ extends CharacterBody2D
 
 signal health_changed(current: int, maximum: int)
 signal died
+signal fireball_ready_changed(available: bool)
 
 @export var speed: float = 70.0
 @export var max_health: int = 3
 @export var invincibility_time: float = 1.0
+
+@export var fireball_scene: PackedScene = preload("res://scenes/fireball.tscn")
+@export var fireball_cooldown: float = 0.75
 
 @export var clamp_to_room: bool = true
 @export var room_size: Vector2 = Vector2(256, 176)
@@ -15,6 +19,7 @@ var facing: Vector2 = Vector2.DOWN
 
 var _invincible_timer: float = 0.0
 var _last_pressed_axis: String = "y"
+var _cooldown_timer: float = 0.0
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 
@@ -22,6 +27,7 @@ var _last_pressed_axis: String = "y"
 func _ready() -> void:
 	health = max_health
 	health_changed.emit(health, max_health)
+	fireball_ready_changed.emit(true)
 	sprite.play("down")
 	sprite.stop()
 
@@ -37,6 +43,7 @@ func _physics_process(delta: float) -> void:
 
 	_update_animation(direction)
 	_update_invincibility(delta)
+	_update_cooldown(delta)
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -44,6 +51,9 @@ func _unhandled_input(event: InputEvent) -> void:
 		_last_pressed_axis = "x"
 	elif event.is_action_pressed("move_up") or event.is_action_pressed("move_down"):
 		_last_pressed_axis = "y"
+
+	if event.is_action_pressed("cast"):
+		cast_fireball()
 
 	if OS.is_debug_build() and event is InputEventKey and event.pressed \
 			and not event.echo and event.physical_keycode == KEY_H:
@@ -89,6 +99,25 @@ func _update_invincibility(delta: float) -> void:
 	sprite.visible = int(_invincible_timer * 20.0) % 2 == 0
 	if _invincible_timer <= 0.0:
 		sprite.visible = true
+
+
+func cast_fireball() -> void:
+	if _cooldown_timer > 0.0 or health <= 0:
+		return
+	var fireball := fireball_scene.instantiate()
+	fireball.direction = facing
+	fireball.position = position + Vector2(0, -14) + facing * 10.0
+	get_parent().add_child(fireball)
+	_cooldown_timer = fireball_cooldown
+	fireball_ready_changed.emit(false)
+
+
+func _update_cooldown(delta: float) -> void:
+	if _cooldown_timer <= 0.0:
+		return
+	_cooldown_timer -= delta
+	if _cooldown_timer <= 0.0:
+		fireball_ready_changed.emit(true)
 
 
 func take_damage(amount: int) -> void:

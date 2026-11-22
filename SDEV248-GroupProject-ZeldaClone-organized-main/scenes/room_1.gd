@@ -7,6 +7,7 @@ extends Node2D
 func _ready() -> void:
 	player.health_changed.connect(hud.set_health)
 	player.died.connect(_on_player_died)
+	player.fireball_ready_changed.connect(hud.set_fireball_ready)
 	hud.set_health(player.health, player.max_health)
 
 

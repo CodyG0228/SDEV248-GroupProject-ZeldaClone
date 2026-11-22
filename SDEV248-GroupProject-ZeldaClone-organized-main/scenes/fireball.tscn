@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scenes/fireball.gd" id="1_k7vq2"]
+[ext_resource type="Texture2D" uid="uid://db5p1vw5n3d78" path="res://sprites/FireBallSprite.webp" id="2_3xn8d"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_p4w1m"]
+radius = 4.0
+
+[node name="Fireball" type="Area2D"]
+script = ExtResource("1_k7vq2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_3xn8d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_p4w1m")

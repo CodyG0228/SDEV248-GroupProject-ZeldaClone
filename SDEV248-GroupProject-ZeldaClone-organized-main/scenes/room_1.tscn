@@ -46,7 +46,7 @@ sources/0 = SubResource("TileSetAtlasSource_vu5en")
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0tsjr"]
 texture = ExtResource("1_0tsjr")
 0:0/0 = 0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:0/0/physics_layer_1/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
 1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:0/0 = 0
@@ -89,6 +89,8 @@ texture = ExtResource("1_0tsjr")
 
 [sub_resource type="TileSet" id="TileSet_4h8vp"]
 physics_layer_0/collision_layer = 1
+physics_layer_1/collision_layer = 2
+physics_layer_1/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_0tsjr")
 
 [node name="Room1" type="Node2D"]
