@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://dhntx8f7xefeh"]
+[gd_scene format=3 uid="uid://dhntx8f7xefeh"]
 
+[ext_resource type="Script" uid="uid://dpte0ig7n5wrt" path="res://scenes/npc_spearwoman.gd" id="1_bl8n6"]
 [ext_resource type="Texture2D" uid="uid://dtwacu32sinhn" path="res://sprites/SpearwomanSpriteSheet.png" id="1_oavj0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jlt7i"]
@@ -16,7 +17,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_jlt7i")
 }],
-"loop": true,
+"loop": 1,
 "name": &"BackView",
 "speed": 5.0
 }, {
@@ -24,7 +25,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_jpb6i")
 }],
-"loop": true,
+"loop": 1,
 "name": &"Frontview",
 "speed": 5.0
 }]
@@ -32,12 +33,13 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_514fu"]
 size = Vector2(25, 59)
 
-[node name="NPC Spearwoman" type="CharacterBody2D" groups=["NPC"]]
+[node name="NPC Spearwoman" type="CharacterBody2D" unique_id=73876376 groups=["NPC"]]
+script = ExtResource("1_bl8n6")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1573142823]
 sprite_frames = SubResource("SpriteFrames_2irqa")
 animation = &"Frontview"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1265366805]
 position = Vector2(0.5, 1.5)
 shape = SubResource("RectangleShape2D_514fu")

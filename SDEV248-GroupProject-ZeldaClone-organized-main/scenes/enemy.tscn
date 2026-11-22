@@ -1,5 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://coyspkspwt0eo"]
+[gd_scene format=3 uid="uid://coyspkspwt0eo"]
 
+[ext_resource type="Script" uid="uid://bbphsnbxj3lqx" path="res://scenes/enemy.gd" id="1_md0e3"]
 [ext_resource type="Texture2D" uid="uid://c8wahigm3ssex" path="res://LizardmanSprite.png" id="1_qc2wn"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mxyj8"]
@@ -49,7 +50,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_iss44")
 }],
-"loop": true,
+"loop": 1,
 "name": &"idle",
 "speed": 1.0
 }, {
@@ -66,7 +67,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_dembu")
 }],
-"loop": true,
+"loop": 1,
 "name": &"walk",
 "speed": 3.0
 }]
@@ -74,12 +75,24 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e4c12"]
 size = Vector2(21, 48)
 
-[node name="Enemy" type="CharacterBody2D" groups=["enemy"]]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gnvyj"]
+size = Vector2(21, 48)
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="Enemy" type="CharacterBody2D" unique_id=1537848146 groups=["enemy"]]
+script = ExtResource("1_md0e3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=170502725]
 sprite_frames = SubResource("SpriteFrames_0askx")
 animation = &"idle"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=47517464]
 position = Vector2(-0.5, 0)
 shape = SubResource("RectangleShape2D_e4c12")
+
+[node name="HitArea" type="Area2D" parent="." unique_id=1345268003]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitArea" unique_id=1605659403]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_gnvyj")
+
+[connection signal="body_entered" from="HitArea" to="." method="_on_body_entered"]

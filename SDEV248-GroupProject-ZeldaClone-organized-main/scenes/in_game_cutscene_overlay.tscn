@@ -1,17 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://bkrffhbqujg2e"]
+[gd_scene format=3 uid="uid://bkrffhbqujg2e"]
 
-[ext_resource type="Script" path="res://scenes/in_game_cutscene_overlay.gd" id="1_4dlco"]
+[ext_resource type="Script" uid="uid://bbxoogyhw7m2w" path="res://scenes/in_game_cutscene_overlay.gd" id="1_4dlco"]
 
-[node name="In-Game Cutscene Overlay" type="Control"]
+[node name="In-Game Cutscene Overlay" type="Control" unique_id=1053629516 groups=["cutscene_overlay"]]
 layout_mode = 3
-anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_4dlco")
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=1970389906]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
@@ -28,7 +27,7 @@ theme_override_font_sizes/font_size = 20
 text = "Greetings, O Great Wizard. Looks like they finally sent you in. I've found the inhuman soldiers. Took out a few of them myself already. They seem to be some sort of lizardmen, their bodies covered with thick scales that resist blades, which makes them tough to kill with ordinary weaponry. You shouldn't have a problem though, your spells should cut right through their physical resistances. Go ahead, I'll stay behind to make sure none of them sneak up on you."
 autowrap_mode = 2
 
-[node name="Button" type="Button" parent="."]
+[node name="Button" type="Button" parent="." unique_id=940258866]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
