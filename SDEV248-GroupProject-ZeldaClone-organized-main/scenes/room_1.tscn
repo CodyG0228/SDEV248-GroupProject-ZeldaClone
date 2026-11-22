@@ -1,9 +1,9 @@
 [gd_scene load_steps=10 format=4 uid="uid://bn2peeww32xm1"]
 
-[ext_resource type="Script" path="res://scenes/room_1.gd" id="2_emo2k"]
-[ext_resource type="PackedScene" path="res://scenes/player.tscn" id="3_1alcf"]
-[ext_resource type="PackedScene" uid="uid://heo5gv5axufy" path="res://scenes/hud.tscn" id="4_fawfn"]
 [ext_resource type="Texture2D" uid="uid://dws5uwax3r16p" path="res://sprites/Sprite-0001.png" id="1_0tsjr"]
+[ext_resource type="Script" path="res://scenes/room_1.gd" id="2_emo2k"]
+[ext_resource type="PackedScene" uid="uid://d06aly8v8absc" path="res://scenes/player.tscn" id="3_1alcf"]
+[ext_resource type="PackedScene" uid="uid://heo5gv5axufy" path="res://scenes/hud.tscn" id="4_fawfn"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8oql1"]
 

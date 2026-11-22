@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://dhntx8f7xefeh"]
+
+[ext_resource type="Texture2D" uid="uid://dtwacu32sinhn" path="res://sprites/SpearwomanSpriteSheet.png" id="1_oavj0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jlt7i"]
+atlas = ExtResource("1_oavj0")
+region = Rect2(42, 0, 42, 63)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jpb6i"]
+atlas = ExtResource("1_oavj0")
+region = Rect2(0, 0, 42, 63)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2irqa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jlt7i")
+}],
+"loop": true,
+"name": &"BackView",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jpb6i")
+}],
+"loop": true,
+"name": &"Frontview",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_514fu"]
+size = Vector2(25, 59)
+
+[node name="NPC Spearwoman" type="CharacterBody2D" groups=["NPC"]]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_2irqa")
+animation = &"Frontview"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 1.5)
+shape = SubResource("RectangleShape2D_514fu")

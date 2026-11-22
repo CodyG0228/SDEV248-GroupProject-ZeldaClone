@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://0of1fd07spcb"]
+[gd_scene load_steps=3 format=3 uid="uid://0of1fd07spcb"]
 
 [ext_resource type="Script" path="res://scenes/defeat_cutscene.gd" id="1_m26tf"]
 [ext_resource type="Texture2D" uid="uid://bh6byc7vum40k" path="res://Kaelistra, The Aberrant Saint.png" id="2_drwk3"]

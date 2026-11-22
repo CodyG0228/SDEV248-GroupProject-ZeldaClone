@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://cecgkgnjmalo4"]
+[gd_scene load_steps=3 format=3 uid="uid://cecgkgnjmalo4"]
 
 [ext_resource type="Script" path="res://scenes/victory_cutscene.gd" id="1_jjql3"]
 [ext_resource type="Texture2D" uid="uid://6ddsoujwtpcv" path="res://Spearwoman.png" id="2_at71w"]

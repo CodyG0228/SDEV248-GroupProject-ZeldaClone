@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://heo5gv5axufy"]
+[gd_scene load_steps=6 format=3 uid="uid://heo5gv5axufy"]
 
-[ext_resource type="Script" path="res://scenes/hud.gd" id="1_i9qrw"]
 [ext_resource type="Texture2D" uid="uid://bbudd66d3yimn" path="res://sprites/EmptyHeartSprite.png" id="1_g624v"]
+[ext_resource type="Script" path="res://scenes/hud.gd" id="1_i9qrw"]
 [ext_resource type="Texture2D" uid="uid://b3x0tbv5y6t5a" path="res://sprites/FullHeartSprite.png" id="2_cex0p"]
+[ext_resource type="Texture2D" uid="uid://db5p1vw5n3d78" path="res://sprites/FireBallSprite.webp" id="4_jja2n"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_61bll"]
 animations = [{
@@ -43,3 +44,7 @@ position = Vector2(35, 35)
 sprite_frames = SubResource("SpriteFrames_61bll")
 animation = &"full"
 autoplay = "full"
+
+[node name="Fireball Cooldown Indicator" type="Sprite2D" parent="."]
+position = Vector2(231, 38)
+texture = ExtResource("4_jja2n")

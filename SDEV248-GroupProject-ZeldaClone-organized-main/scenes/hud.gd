@@ -15,3 +15,7 @@ func set_health(current: int, maximum: int) -> void:
 		var heart := _hearts[i]
 		heart.visible = i < maximum
 		heart.play("full" if i < current else "empty")
+
+# Add script for fireball cooldown. Simply alter the indicator's visibility to 
+# show whether or not the cooldown is done. The cooldown is not necessary but
+# probably should be. Determine the time yourselves. Cooldown is optional.

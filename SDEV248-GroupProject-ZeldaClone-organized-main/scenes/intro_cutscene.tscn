@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://u7f8hqxah26"]
+[gd_scene load_steps=34 format=3 uid="uid://u7f8hqxah26"]
 
 [ext_resource type="Script" path="res://scenes/intro_cutscene.gd" id="1_awupj"]
 [ext_resource type="Texture2D" uid="uid://bayxdoeppttt1" path="res://FlowingFieldAnimatedBackground.png" id="1_yed6w"]
@@ -330,6 +330,6 @@ offset_right = 105.5
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 60
-text = "Press to Begin the Mission"
+text = "Click to Begin the Mission"
 
 [connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
