@@ -24,7 +24,7 @@ func _ready() -> void:
 
 	hud.set_health(player.health, player.max_health)
 
-	var enemies = get_tree().get_nodes_in_group("enemy")
+	var enemies = _get_room_enemies()
 	enemies_remaining = enemies.size()
 
 	for enemy in enemies:
@@ -34,7 +34,13 @@ func _ready() -> void:
 	var transition = _find_transition_node()
 
 	if transition:
+		transition.monitoring = true
+		transition.collision_mask = 1
 		transition.body_entered.connect(_on_transition_entered)
+
+
+func _process(_delta: float) -> void:
+	enemies_remaining = _get_room_enemies().size()
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -58,6 +64,18 @@ func _find_transition_node() -> Area2D:
 			return child
 
 	return null
+
+
+# this will prevent the game including enemies from other rooms,
+# which will hinder progression across rooms
+func _get_room_enemies() -> Array[Node]:
+	var enemies: Array[Node] = []
+
+	for node in find_children("*", "CharacterBody2D", true, false):
+		if node.is_in_group("enemy") and is_instance_valid(node):
+			enemies.append(node)
+
+	return enemies
 
 
 func _on_enemy_died() -> void:

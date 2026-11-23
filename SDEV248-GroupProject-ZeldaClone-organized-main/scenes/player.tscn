@@ -61,10 +61,9 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k3m30"]
-size = Vector2(14, 32)
+size = Vector2(11, 11)
 
 [node name="Player" type="CharacterBody2D" unique_id=266687675 groups=["player"]]
-collision_mask = 3
 motion_mode = 1
 script = ExtResource("1_0ahi4")
 
@@ -75,5 +74,5 @@ animation = &"up"
 offset = Vector2(0, -16)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=870438257]
-position = Vector2(0, -16)
+position = Vector2(0.5, -5.5)
 shape = SubResource("RectangleShape2D_k3m30")

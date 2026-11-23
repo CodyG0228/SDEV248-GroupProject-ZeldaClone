@@ -50,6 +50,15 @@ func _physics_process(delta: float) -> void:
 		velocity = Vector2.ZERO
 
 	move_and_slide()
+	# directly fixes enemy not being able to attack player. not pretty, but working. 
+	# works by detecting contact with "player"
+	# invincibility timer in "player.gd" will prevent the enemy from basically one-shotting the player.
+	for i in get_slide_collision_count():
+		var collision := get_slide_collision(i)
+		var body := collision.get_collider()
+
+		if body is Node and body.is_in_group("player") and body.has_method("take_damage"):
+			body.take_damage(contact_damage)
 	_update_animation(move_dir)
 
 

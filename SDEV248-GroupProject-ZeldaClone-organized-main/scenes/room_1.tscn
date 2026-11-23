@@ -102,7 +102,7 @@ size = Vector2(19, 48)
 [node name="Room1" type="Node2D" unique_id=1643604043]
 texture_filter = 1
 script = ExtResource("1_d0u7m")
-next_scene = "uid://bh8312v6civqm"
+next_scene = "res://scenes/room_2.tscn"
 spawn_position = Vector2(136, 120)
 
 [node name="Background" type="CanvasLayer" parent="." unique_id=132569194]
