@@ -4,7 +4,7 @@ extends CharacterBody2D
 @export var dialogue_text: String = "Greetings, O Great Wizard..."
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
-@onready var overlay: Control
+@onready var overlay: CanvasLayer
 
 var _move_dir: Vector2 = Vector2.RIGHT
 var _move_timer: float = 0.0

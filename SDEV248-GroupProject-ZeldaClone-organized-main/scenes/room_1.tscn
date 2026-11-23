@@ -154,4 +154,3 @@ scale = Vector2(0.42560637, 1.0793798)
 shape = SubResource("RectangleShape2D_gnvyj")
 
 [node name="In-Game Cutscene Overlay" parent="." unique_id=1053629516 instance=ExtResource("7_d0u7m")]
-anchors_preset = 15

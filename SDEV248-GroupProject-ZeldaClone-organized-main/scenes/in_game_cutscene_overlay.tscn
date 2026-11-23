@@ -2,16 +2,12 @@
 
 [ext_resource type="Script" uid="uid://bbxoogyhw7m2w" path="res://scenes/in_game_cutscene_overlay.gd" id="1_4dlco"]
 
-[node name="In-Game Cutscene Overlay" type="Control" unique_id=1053629516 groups=["cutscene_overlay"]]
-layout_mode = 3
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="In-Game Cutscene Overlay" type="CanvasLayer" unique_id=1617228589 groups=["cutscene_overlay"]]
+process_mode = 3
 script = ExtResource("1_4dlco")
 
 [node name="Label" type="Label" parent="." unique_id=1970389906]
-layout_mode = 1
+process_mode = 3
 anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
@@ -28,7 +24,7 @@ text = "Greetings, O Great Wizard. Looks like they finally sent you in. I've fou
 autowrap_mode = 2
 
 [node name="Button" type="Button" parent="." unique_id=940258866]
-layout_mode = 1
+process_mode = 2
 anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 31.0

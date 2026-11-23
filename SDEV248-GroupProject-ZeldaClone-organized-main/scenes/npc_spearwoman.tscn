@@ -35,6 +35,7 @@ size = Vector2(25, 59)
 
 [node name="NPC Spearwoman" type="CharacterBody2D" unique_id=73876376 groups=["NPC"]]
 script = ExtResource("1_bl8n6")
+dialogue_text = "Greetings, O Great Wizard. Looks like they finally sent you in. I've found the inhuman soldiers. Took out a few of them myself already. They seem to be some sort of lizardmen, their bodies covered with thick scales that resist blades, which makes them tough to kill with ordinary weaponry. You shouldn't have a problem though, your spells should cut right through their physical resistances. Go ahead, I'll stay behind to make sure none of them sneak up on you."
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1573142823]
 sprite_frames = SubResource("SpriteFrames_2irqa")
