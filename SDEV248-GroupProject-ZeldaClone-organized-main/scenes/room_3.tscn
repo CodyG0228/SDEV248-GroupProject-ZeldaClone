@@ -76,6 +76,9 @@ texture = ExtResource("1_pmnxm")
 [sub_resource type="TileSet" id="TileSet_yvqia"]
 sources/0 = SubResource("TileSetAtlasSource_6w2ej")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h8aii"]
+size = Vector2(64.5, 446)
+
 [node name="Room3" type="Node2D" unique_id=450478499]
 script = ExtResource("1_6w2ej")
 next_scene = "uid://cecgkgnjmalo4"
@@ -123,3 +126,9 @@ scale = Vector2(1, 0.9200007)
 [node name="Enemy3" parent="." unique_id=1075604415 instance=ExtResource("4_6w2ej")]
 position = Vector2(488, 63)
 scale = Vector2(1, 0.9200007)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=750041318]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1395794533]
+position = Vector2(592.25, 223)
+shape = SubResource("RectangleShape2D_h8aii")
