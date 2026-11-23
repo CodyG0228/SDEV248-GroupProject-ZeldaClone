@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://bn2peeww32xm1"]
 
 [ext_resource type="Texture2D" uid="uid://dws5uwax3r16p" path="res://sprites/Sprite-0001.png" id="1_0tsjr"]
-[ext_resource type="Script" uid="uid://rbaaln20q5to" path="res://scenes/room_1.gd" id="2_emo2k"]
+[ext_resource type="Script" uid="uid://qi2sklsf044h" path="res://scenes/room_base.gd" id="1_d0u7m"]
 [ext_resource type="PackedScene" uid="uid://d06aly8v8absc" path="res://scenes/player.tscn" id="3_1alcf"]
 [ext_resource type="PackedScene" uid="uid://heo5gv5axufy" path="res://scenes/hud.tscn" id="4_fawfn"]
 [ext_resource type="PackedScene" uid="uid://coyspkspwt0eo" path="res://scenes/enemy.tscn" id="5_irjyx"]
@@ -101,7 +101,9 @@ size = Vector2(19, 48)
 
 [node name="Room1" type="Node2D" unique_id=1643604043]
 texture_filter = 1
-script = ExtResource("2_emo2k")
+script = ExtResource("1_d0u7m")
+next_scene = "uid://bh8312v6civqm"
+spawn_position = Vector2(136, 120)
 
 [node name="Background" type="CanvasLayer" parent="." unique_id=132569194]
 layer = -1
@@ -152,3 +154,4 @@ scale = Vector2(0.42560637, 1.0793798)
 shape = SubResource("RectangleShape2D_gnvyj")
 
 [node name="In-Game Cutscene Overlay" parent="." unique_id=1053629516 instance=ExtResource("7_d0u7m")]
+anchors_preset = 15
