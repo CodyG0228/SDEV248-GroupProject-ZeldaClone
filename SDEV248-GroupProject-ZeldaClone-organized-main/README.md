@@ -9,11 +9,11 @@ Duncan Hegerman
 Ean Miller
 
 ## Control Scheme (can be modified in Project Settings)
-Move Up - "W"
-Move Down - "S"
-Move Left - "A"
-Move Right - "D"
-Cast (fireball) - Spacebar
+Move Up - "W"   
+Move Down - "S"  
+Move Left - "A"  
+Move Right - "D"  
+Cast (fireball) - Spacebar  
 Interact (with Spearwoman) - "E"
 
 ## Scene Explanations (all located in /scenes)
