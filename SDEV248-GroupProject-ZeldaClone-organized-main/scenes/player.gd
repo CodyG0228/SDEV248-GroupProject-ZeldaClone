@@ -4,7 +4,7 @@ signal health_changed(current: int, maximum: int)
 signal died
 signal fireball_ready_changed(available: bool)
 
-@export var speed: float = 70.0
+@export var speed: float = 80.0
 @export var max_health: int = 3
 @export var invincibility_time: float = 1.0
 
