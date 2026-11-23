@@ -2,7 +2,7 @@ Group Project for SDEV248 at Ivy Tech Community College, taught by Professor Mar
 
 This project aims to generally re-create three sequential scenes from the original Legend of Zelda on the NES.
 
-Group Members in alphabetical order:
+Group Members in alphabetical order:  
 Cody Gunter  
 Duncan Hegerman  
 Ean Miller  
